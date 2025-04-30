@@ -1,12 +1,19 @@
 import React from 'react';
 
-function AvailableWeek() {
+function Bookingrequest() {
   return (
-    <div className="bg-white p-5">
+    
+    <div className="relative w-full min-h-screen p-5">
+      {/* Background Image */}
+      <img 
+        src="image.jpg" 
+        alt="Home Services"    
+        className="w-full h-full object-cover absolute top-0 left-0 -z-10" 
+      />
       <div className="p-4 bg-blue-700 text-white">
         <div className="flex items-center">
-          <div className="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center">
-            <span className="text-2xl">S</span>
+          <div className="w-16 h-16 bg-gray-500 rounded-full flex items-center justify-center">
+            <span className="text-2xl ">S</span>
           </div>
           <div className="ml-4">
             <h1 className="text-xl font-semibold">Home Service (Profile)</h1>
@@ -20,7 +27,7 @@ function AvailableWeek() {
       </div>
 
       <div className="mt-6">
-        <h2 className="text-2xl font-bold">Booking Request</h2>
+        <h2 className="text-2xl font-bold text-white">Booking Request</h2>
       </div>
 
       <table className="mt-4 w-full bg-white rounded shadow-md">
@@ -123,4 +130,4 @@ function AvailableWeek() {
   );
 }
 
-export default AvailableWeek;
+export default Bookingrequest;

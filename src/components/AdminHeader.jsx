@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-function SpecialHeader() {
+
+function AdminHeader() {
   // State to manage the dropdown visibility
   const [isOpen, setIsOpen] = useState(false);
 
@@ -14,8 +16,8 @@ function SpecialHeader() {
       <div className="bg-blue-950 p-3.5 z-10">
         <div className="flex justify-between items-center mx-12">
           {/* Header Text */}
-          <h1 className="text-2xl text-yellow-500 text-center font-bold font-poppins">
-          HOME SERVICES BOOKING PLATFORM
+          <h1 className="text-2xl text-yellow-500 text-center font-bold font-poppins ">
+            HOME SERVICES BOOKING PLATFORM
           </h1>
 
           {/* Service Type Dropdown */}
@@ -35,6 +37,7 @@ function SpecialHeader() {
                 viewBox="0 0 20 20"
                 stroke="currentColor"
                 aria-hidden="true"
+            
               >
                 <path
                   strokeLinecap="round"
@@ -55,43 +58,31 @@ function SpecialHeader() {
               aria-labelledby="menu-button"
             >
               <div className="py-1" role="none">
-                <a
-                  href="/ServiceProfile"
-                  className="text-gray-700 block px-4 py-2 text-sm"
-                  role="menuitem"
-                >
-                  Profile
-                </a>
-                <a
-                  href="/AvailableWeek"
-                  className="text-gray-700 block px-4 py-2 text-sm"
-                  role="menuitem"
-                >
-                    Availability for the week
-                </a>
-                <a
-                  href="/Bookingrequest"
-                  className="text-gray-700 block px-4 py-2 text-sm"
-                  role="menuitem"
-                >
-                  Booking Request
-                  </a>
-                  <a
-                  href="/Login"
-                  className="text-gray-700 block px-4 py-2 text-sm"
-                  role="menuitem"
-                >
-                  Log out
-
-                  
-                </a>
+              <Link to="/UserManagement" className="text-gray-700 block px-4 py-2 text-sm">
+            User Management
+            </Link>
+            <div className="py-1" role="none">
+              <Link to="/AdmitBooking" className="text-gray-700 block px-4 py-2 text-sm">
+            Bookings
+            </Link>
+            <div className="py-1" role="none">
+              <Link to="/ApproveProvider" className="text-gray-700 block px-4 py-2 text-sm">
+            Approve providers
+            </Link>
+            <div className="py-1" role="none">
+              <Link to="/Login" className="text-gray-700 block px-4 py-2 text-sm">
+            Log out
+            </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    </div>
   );
 }
 
-export default SpecialHeader;
+export default AdminHeader;

@@ -4,7 +4,7 @@ const ContactUs = () => {
   return (
     <div>
       <div className="relative">
-        <img src="img2.jpg" alt="Home Services" className="w-full h-[570px] object-cover" />
+        <img src="image.jpg" alt="Home Services" className="w-full h-[570px] object-cover" />
       </div>
 
       <div className="w-[300px] h-[300px] rounded-full overflow-hidden absolute top-20 right-20">
@@ -26,7 +26,7 @@ const ContactUs = () => {
   </span>
   </span>
   </div>
-  <div className="text-custom-yellow font-bold absolute top-1/3 left-40 text-5xl font-serif">Want To Know More? <br></br>
+  <div className="text-custom-yellow font-bold absolute top-44 left-40 text-6xl font-serif">Want To Know More? <br></br>
   Reach out to us!
   </div>
          

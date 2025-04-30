@@ -5,7 +5,7 @@ const Home = () => {
     <div>
       <div className="relative">
         <div>
-          <img src="img2.jpg" alt="Home Services" className="w-full h-[563px] object-cover" />
+          <img src="image.jpg" alt="Home Services" className="w-full h-[563px] object-cover" />
         </div>
         
         <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 flex flex-col space-y-3">

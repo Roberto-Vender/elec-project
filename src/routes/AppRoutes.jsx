@@ -5,6 +5,7 @@ import DefaultLayout from "../layouts/DefaultLayout";
 import SpecialLayout from "../layouts/SpecialLayout";
 import Nonelayout from "../layouts/Nonelayout";
 import CustomerLayout from "../layouts/CustomerLayout";
+import AdminLayout from "../layouts/AdminLayout";
 
 
 import Home from "../pages/Home";
@@ -21,7 +22,9 @@ import Bookingrequest from "../pages/Bookingrequest";
 import CreateAccountCustomer from "../pages/CreateAccountCustomer";
 import CustomerProfile from "../pages/CustomerProfile";
 import BookAppointment from "../pages/BookAppointment";
-
+import UserManagement from "../pages/UserManagement";
+import AdmitBooking from "../pages/AdmitBooking";
+import ApproveProvider from "../pages/ApproveProvider";
 
 
 const AppRoutes = () => {
@@ -44,6 +47,7 @@ const AppRoutes = () => {
         <Route path="/ServiceProfile" element={<ServiceProfile />} />
         <Route path="/AvailableWeek" element={<AvailableWeek />} />
         <Route path="/Bookingrequest" element={<Bookingrequest />} />
+        
         </Route>
 
       {/* Routes that use HeaderNone */}
@@ -57,7 +61,14 @@ const AppRoutes = () => {
       <Route path="/CustomerProfile" element={<CustomerProfile />} />
       <Route path="/BookAppointment" element={<BookAppointment />} />
       </Route>
-      
+
+      {/* Routes that use AdminHeader */}
+      <Route element={<AdminLayout />}>
+      <Route path="/UserManagement" element={<UserManagement />} />
+      <Route path="/AdmitBooking" element={<AdmitBooking />} />
+      <Route path="/ApproveProvider" element={<ApproveProvider />} />
+
+      </Route>
 
     </Routes>
   );

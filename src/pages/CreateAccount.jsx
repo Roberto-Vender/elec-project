@@ -6,7 +6,7 @@ const CreateAccount = () => {
     <div className="relative w-full h-screen">
       {/* Background Image */}
       <img 
-        src="img2.jpg" 
+        src="image.jpg" 
         alt="Home Services"    className="w-full h-full object-cover absolute top-0 left-0 -z-10" 
       />
 

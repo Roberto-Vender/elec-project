@@ -13,7 +13,7 @@ function CustomerHeader() {
 
   return (
     <div className="relative">
-      <div className="bg-blue-900 p-3.5 z-10">
+      <div className="bg-blue-950 p-3.5 z-10">
         <div className="flex justify-between items-center mx-12">
           {/* Header Text */}
           <h1 className="text-2xl text-yellow-500 text-center font-bold font-poppins">
@@ -37,6 +37,7 @@ function CustomerHeader() {
                 viewBox="0 0 20 20"
                 stroke="currentColor"
                 aria-hidden="true"
+            
               >
                 <path
                   strokeLinecap="round"
@@ -64,13 +65,12 @@ function CustomerHeader() {
               <Link to="/BookAppointment" className="text-gray-700 block px-4 py-2 text-sm">
             Book Appointment
             </Link>
-                <a
-                  href="/Bookingrequest"
-                  className="text-gray-700 block px-4 py-2 text-sm"
-                  role="menuitem"
-                >
-                  Booking Request
-                </a>
+            <div className="py-1" role="none">
+              <Link to="/login" className="text-gray-700 block px-4 py-2 text-sm">
+            Log out
+            </Link>
+              
+                </div>
               </div>
             </div>
           </div>

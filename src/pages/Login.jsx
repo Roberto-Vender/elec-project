@@ -16,7 +16,7 @@ const Login = () => {
     };
 
     if (email === mockUsers.admin.email && password === mockUsers.admin.password) {
-      navigate('/admin'); 
+      navigate('/UserManagement'); 
     } else if (email === mockUsers.client.email && password === mockUsers.client.password) {
       navigate('/CreateAccountCustomer'); 
     } else if (email === mockUsers.worker.email && password === mockUsers.worker.password) {
@@ -30,7 +30,7 @@ const Login = () => {
     <div className="relative w-full h-screen">
       {/* Background Image */}
       <img 
-        src="img2.jpg" 
+        src="image.jpg" 
         alt="Home Services" 
         className="w-full h-full object-cover absolute top-0 left-0 -z-10" 
       />
