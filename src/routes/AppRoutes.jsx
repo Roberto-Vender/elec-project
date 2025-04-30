@@ -25,6 +25,8 @@ import BookAppointment from "../pages/BookAppointment";
 import UserManagement from "../pages/UserManagement";
 import AdmitBooking from "../pages/AdmitBooking";
 import ApproveProvider from "../pages/ApproveProvider";
+import SaveChangesCustomer from "../pages/SaveChangesCustomer";
+import SaveChangesProvider from "../pages/SaveChangesProvider";
 
 
 const AppRoutes = () => {
@@ -54,6 +56,8 @@ const AppRoutes = () => {
       <Route element={<Nonelayout />}>
       <Route path="/CreateAccountCustomer" element={<CreateAccountCustomer />} />
       <Route path="/CreateProfile" element={<CreateProfile />} /> 
+      <Route path="/SaveChangesCustomer" element={<SaveChangesCustomer />} />
+      <Route path="/SaveChangesProvider" element={<SaveChangesProvider />} />
       </Route>
 
       {/* Routes that use CustomerHeader */}

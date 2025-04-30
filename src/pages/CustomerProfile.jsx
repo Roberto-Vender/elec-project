@@ -29,7 +29,7 @@ function CustomerProfile() {
               </div>
             </div>
             <div className="ml-auto">
-              <Link to="/CreateAccountCustomer">
+              <Link to="/SaveChangesCustomer">
                 <button className="bg-gray-300 text-blue-700 px-4 py-2 rounded">
                   Edit Profile Details
                 </button>
