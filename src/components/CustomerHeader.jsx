@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-
 function CustomerHeader() {
   // State to manage the dropdown visibility
   const [isOpen, setIsOpen] = useState(false);
@@ -9,6 +8,11 @@ function CustomerHeader() {
   // Toggle function for the dropdown
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
+  };
+
+  // Function to close the dropdown when a menu item is clicked
+  const closeDropdown = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -20,32 +24,15 @@ function CustomerHeader() {
             Home Services Booking Platform
           </h1>
 
-          {/* Service Type Dropdown */}
-          <div className="relative inline-block text-left">
+          {/* Hamburger Menu Button */}
+          <div className="relative">
             <button
-              type="button"
-              className="inline-flex justify-center w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100"
-              id="menu-button"
-              aria-expanded={isOpen ? 'true' : 'false'}
-              aria-haspopup="true"
-              onClick={toggleDropdown} // Toggle dropdown visibility
+              onClick={toggleDropdown}
+              className="flex flex-col justify-center items-center w-10 h-10 rounded focus:outline-none"
             >
-              Options
-              <svg
-                className="-mr-1 ml-2 h-5 w-5 text-gray-400"
-                fill="none"
-                viewBox="0 0 20 20"
-                stroke="currentColor"
-                aria-hidden="true"
-            
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M5 7l7 7 7-7"
-                ></path>
-              </svg>
+              <span className="block w-6 h-0.5 bg-white mb-1"></span>
+              <span className="block w-6 h-0.5 bg-white mb-1"></span>
+              <span className="block w-6 h-0.5 bg-white"></span>
             </button>
 
             {/* Dropdown Menu */}
@@ -58,25 +45,36 @@ function CustomerHeader() {
               aria-labelledby="menu-button"
             >
               <div className="py-1" role="none">
-              <Link to="/CustomerProfile" className="text-gray-700 block px-4 py-2 text-sm">
-            Profile
-            </Link>
-            <div className="py-1" role="none">
-              <Link to="/BookAppointment" className="text-gray-700 block px-4 py-2 text-sm">
-            Book Appointment
-            </Link>
-            <div className="py-1" role="none">
-              <Link to="/login" className="text-gray-700 block px-4 py-2 text-sm">
-            Log out
-            </Link>
-              
-                </div>
+                <Link
+                  to="/CustomerProfile"
+                  className="text-gray-700 block px-4 py-2 text-sm"
+                  onClick={closeDropdown} // Close dropdown when clicked
+                >
+                  Profile
+                </Link>
+              </div>
+              <div className="py-1" role="none">
+                <Link
+                  to="/BookAppointment"
+                  className="text-gray-700 block px-4 py-2 text-sm"
+                  onClick={closeDropdown} // Close dropdown when clicked
+                >
+                  Book Appointment
+                </Link>
+              </div>
+              <div className="py-1" role="none">
+                <Link
+                  to="/login"
+                  className="text-gray-700 block px-4 py-2 text-sm"
+                  onClick={closeDropdown} // Close dropdown when clicked
+                >
+                  Log out
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }
